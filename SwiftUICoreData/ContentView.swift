@@ -11,6 +11,8 @@ import UIKit
 
 struct ContentView: View {
     
+    // State and Environment variables
+    @State private var showingSheet = false
     @FetchRequest(
         entity: Stock.entity(),
         sortDescriptors: [
@@ -30,28 +32,23 @@ struct ContentView: View {
                 .onDelete(perform: delete)
             }
             .navigationBarTitle("SwiftUI + CoreDate")
-            .navigationBarItems(leading: Button(action: addStock) {
+            .navigationBarItems(leading: Button(action: {
+                self.showingSheet = true
+            }) {
                 Image(systemName: "plus")
-            }, trailing: EditButton())
+            }, trailing: EditButton()).sheet(isPresented: $showingSheet, content: {
+                AddStock().environment(\.managedObjectContext, ((UIApplication.shared.delegate as? AppDelegate)?.managedContext())!)
+            })
         }
     }
     
-    func delete(at offsets: IndexSet) {
+    // Deletes the selected stock symbol from core data and saves the changes.
+    fileprivate func delete(at offsets: IndexSet) {
         let context = ((UIApplication.shared.delegate as? AppDelegate)?.managedContext())
         for index in offsets {
             let stock = stocks[index]
             context?.delete(stock)
         }
-        (UIApplication.shared.delegate as? AppDelegate)?.coreData.saveContext()
-    }
-    func addStock() {
-        // 1
-        let newStock = Stock(context: ((UIApplication.shared.delegate as? AppDelegate)?.managedContext())!)
-
-        // 2
-        newStock.symbol = "AAPL"
-        newStock.name = "Apple Inc."
-        // 3
         (UIApplication.shared.delegate as? AppDelegate)?.coreData.saveContext()
     }
 }

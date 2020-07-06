@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E995642624B2BD37001C36A2 /* AddStock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E995642524B2BD37001C36A2 /* AddStock.swift */; };
 		E9E4D58E24AEBCCC00E0B8D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4D58D24AEBCCC00E0B8D0 /* AppDelegate.swift */; };
 		E9E4D59024AEBCCC00E0B8D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4D58F24AEBCCC00E0B8D0 /* SceneDelegate.swift */; };
 		E9E4D59324AEBCCC00E0B8D0 /* SwiftUICoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9E4D59124AEBCCC00E0B8D0 /* SwiftUICoreData.xcdatamodeld */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E995642524B2BD37001C36A2 /* AddStock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStock.swift; sourceTree = "<group>"; };
 		E9E4D58A24AEBCCC00E0B8D0 /* SwiftUICoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUICoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9E4D58D24AEBCCC00E0B8D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9E4D58F24AEBCCC00E0B8D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				E9E4D58D24AEBCCC00E0B8D0 /* AppDelegate.swift */,
 				E9E4D58F24AEBCCC00E0B8D0 /* SceneDelegate.swift */,
 				E9E4D59424AEBCCC00E0B8D0 /* ContentView.swift */,
+				E995642524B2BD37001C36A2 /* AddStock.swift */,
 				E9E4D59624AEBCCD00E0B8D0 /* Assets.xcassets */,
 				E9E4D59B24AEBCCD00E0B8D0 /* LaunchScreen.storyboard */,
 				E9E4D59E24AEBCCD00E0B8D0 /* Info.plist */,
@@ -172,6 +175,7 @@
 				E9E4D59524AEBCCC00E0B8D0 /* ContentView.swift in Sources */,
 				E9E4D59324AEBCCC00E0B8D0 /* SwiftUICoreData.xcdatamodeld in Sources */,
 				E9E4D5A624AEBCF400E0B8D0 /* CoreDataStack.swift in Sources */,
+				E995642624B2BD37001C36A2 /* AddStock.swift in Sources */,
 				E9E4D5AF24AEC71F00E0B8D0 /* Stock+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
