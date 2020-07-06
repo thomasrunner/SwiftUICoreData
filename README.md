@@ -9,5 +9,5 @@ NavigationView, List, ForEach, HStack, Button, Text, TextField, Sheet
 ### Data Flow
 @State, @Environment, @FetchRequest
 
-### Simple SwiftUI
+### Simple SwiftUI Screenshot of iPhoneXS
 <img src="https://github.com/thomasrunner/SwiftUICoreData/blob/master/screenshot1.png?raw=true" alt="Main view showing stocks" width="313" height="679" /> | <img src="https://github.com/thomasrunner/SwiftUICoreData/blob/master/screenshot2.png?raw=true" alt="Add stock view" width="313" height="679" /> | <img src="https://github.com/thomasrunner/SwiftUICoreData/blob/master/screenshot3.png?raw=true" alt="Add stock view with simple inline errors" width="313" height="679" />
