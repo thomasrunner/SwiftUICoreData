@@ -1,7 +1,7 @@
 # SwiftUI and CoreData Sample Demo
 This project illustrates how to integrate SwiftUI with CoreData using Xcode 11.5 and Swift 5. In addition it demonstrates how to create a custom SwiftUI control (in this case "EntryField") used in forms and see it rendered with PreviewProvider using a sample model.
 
-Some of the SwiftUI new components used.
+Some of the new SwiftUI components used.
 
 ### UI Components
 NavigationView, List, ForEach, HStack, VStack, Button, Text, TextField, Sheet, Custom View, PreviewProvider
