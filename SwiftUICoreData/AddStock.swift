@@ -5,35 +5,30 @@
 //  Created by Thomas on 2020-07-05.
 //  Copyright © 2020 Thomas Lock. All rights reserved.
 //
-
 import SwiftUI
+
+struct EntryModel {
+    var title: String
+    var value: String
+    var inlineError: String
+}
 
 struct AddStock: View {
     
-    // Simple constants
-    let stockSymbolTitle: String = "Stock Symbol"
-    let stockDescriptionTitle: String = "Stock Description"
-    
     // State and Environment variables
-    @State private var stockSymbol: String = ""
-    @State private var stockDescription: String = ""
-    @State private var submitted: Bool = false
+    @State var submitted: Bool = false
+    @State var symbolModel = EntryModel(title: "Stock Symbol", value: "", inlineError: "Please enter stock symbol!")
+    @State var descriptionModel = EntryModel(title: "Stock Description", value: "", inlineError: "Please enter stock symbol description!")
     @Environment(\.presentationMode) private var presentationMode
-        
+    
     var body: some View {
         NavigationView {
             VStack(alignment: .center) {
                 VStack(alignment: .leading, spacing: 10) {
-                    Text(self.stockSymbolTitle).font(.callout).bold()
-                    TextField(self.stockSymbolTitle, text: $stockSymbol).textFieldStyle(RoundedBorderTextFieldStyle())
-                    if submitted && stockSymbol.isEmpty {
-                        Text("Please enter stock symbol!").font(.footnote).foregroundColor(Color.red)
-                    }
-                    Text(self.stockDescriptionTitle).font(.callout).bold()
-                    TextField(self.stockDescriptionTitle, text: $stockDescription).textFieldStyle(RoundedBorderTextFieldStyle())
-                    if submitted && stockDescription.isEmpty {
-                        Text("Please enter stock symbol description!").font(.footnote).foregroundColor(Color.red)
-                    }
+                
+                    //Custom TextField entry view using simple MVVM pattern
+                    EntryField(entryModel: $symbolModel, submitted: $submitted)
+                    EntryField(entryModel: $descriptionModel, submitted: $submitted)
                     Spacer()
                     Button(action: {
                         self.addStockSymbol()
@@ -59,7 +54,6 @@ struct AddStock: View {
                     }.padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0))
                     Spacer()
                 }.padding(EdgeInsets.init(top: 10, leading: 20, bottom: 20, trailing: 20))
-                
             }
             .navigationBarTitle("Add New Stock")
         }
@@ -67,11 +61,11 @@ struct AddStock: View {
         
     // Adds the new symbol to core data if there are valid values and saves the changes.
     fileprivate func addStockSymbol() {
-        if !stockDescription.isEmpty  && !stockSymbol.isEmpty {
+        if !descriptionModel.value.isEmpty  && !symbolModel.value.isEmpty {
             let context = ((UIApplication.shared.delegate as? AppDelegate)?.managedContext())
             let newStock = Stock(entity: Stock.entity(), insertInto: context)
-            newStock.symbol = self.stockSymbol
-            newStock.name = self.stockDescription
+            newStock.symbol = self.symbolModel.value
+            newStock.name = self.descriptionModel.value
             (UIApplication.shared.delegate as? AppDelegate)?.coreData.saveContext()
             self.presentationMode.wrappedValue.dismiss()
         } else {

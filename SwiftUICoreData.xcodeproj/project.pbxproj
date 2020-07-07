@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E995642624B2BD37001C36A2 /* AddStock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E995642524B2BD37001C36A2 /* AddStock.swift */; };
+		E995642924B3E560001C36A2 /* EntryField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E995642824B3E560001C36A2 /* EntryField.swift */; };
 		E9E4D58E24AEBCCC00E0B8D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4D58D24AEBCCC00E0B8D0 /* AppDelegate.swift */; };
 		E9E4D59024AEBCCC00E0B8D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4D58F24AEBCCC00E0B8D0 /* SceneDelegate.swift */; };
 		E9E4D59324AEBCCC00E0B8D0 /* SwiftUICoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9E4D59124AEBCCC00E0B8D0 /* SwiftUICoreData.xcdatamodeld */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		E995642524B2BD37001C36A2 /* AddStock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStock.swift; sourceTree = "<group>"; };
+		E995642824B3E560001C36A2 /* EntryField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryField.swift; sourceTree = "<group>"; };
 		E9E4D58A24AEBCCC00E0B8D0 /* SwiftUICoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUICoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9E4D58D24AEBCCC00E0B8D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9E4D58F24AEBCCC00E0B8D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E995642724B3E4F6001C36A2 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E995642824B3E560001C36A2 /* EntryField.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		E9E4D58124AEBCCC00E0B8D0 = {
 			isa = PBXGroup;
 			children = (
@@ -66,9 +76,10 @@
 		E9E4D58C24AEBCCC00E0B8D0 /* SwiftUICoreData */ = {
 			isa = PBXGroup;
 			children = (
-				E9E4D5A424AEBCDC00E0B8D0 /* CoreData */,
 				E9E4D58D24AEBCCC00E0B8D0 /* AppDelegate.swift */,
 				E9E4D58F24AEBCCC00E0B8D0 /* SceneDelegate.swift */,
+				E995642724B3E4F6001C36A2 /* Components */,
+				E9E4D5A424AEBCDC00E0B8D0 /* CoreData */,
 				E9E4D59424AEBCCC00E0B8D0 /* ContentView.swift */,
 				E995642524B2BD37001C36A2 /* AddStock.swift */,
 				E9E4D59624AEBCCD00E0B8D0 /* Assets.xcassets */,
@@ -176,6 +187,7 @@
 				E9E4D59324AEBCCC00E0B8D0 /* SwiftUICoreData.xcdatamodeld in Sources */,
 				E9E4D5A624AEBCF400E0B8D0 /* CoreDataStack.swift in Sources */,
 				E995642624B2BD37001C36A2 /* AddStock.swift in Sources */,
+				E995642924B3E560001C36A2 /* EntryField.swift in Sources */,
 				E9E4D5AF24AEC71F00E0B8D0 /* Stock+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
